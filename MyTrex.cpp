@@ -15,8 +15,11 @@ namespace TRexLib{
         this->i2c = i2c;
         this->i2cAddress = i2cAddress;
     }
-    readStatus(StatusDataPacket * ):bool{
-	
+    readStatus::readStatus(StatusDataPacket * ):bool{
+	return 0
+    }
+    writeCommand::writeCommand(CommandDataPacket*):bool{
+	return 0
     }
     
 }

@@ -11,7 +11,7 @@ namespace TRexlib{
 	class MyTrex: public Trex{
 	public:  
 		MyTrex(I2C,int);
-		readStatus(StatusDataPacket * ):bool;
+		readStatus::readStatus(StatusDataPacket * ):bool;
 		writeCommand(CommandDataPacket*):bool;
 
 
