@@ -5,7 +5,7 @@
 #include <fcntl.h>          //O_RDWR
 #include <stdio.h>          //perror
 
-namespace RemoteMemoryLib{
+namespace TRexLib{
     
     ssize_t (* pi_i2c_write)(int, const void *, size_t) = write;
     ssize_t (* pi_i2c_read)(int, void *, size_t) = read;

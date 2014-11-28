@@ -37,10 +37,10 @@ namespace TRexLib{
     class MyStatusDataPacket: public StatusDataPacket{
 
 public:
-	virtual std::string MytoJSON(void) = 0;
-	virtual void MyfromJSON(std::string json) = 0;
-	virtual void MytoTRex(char * buffer) = 0;
-	virtual void MyfromTRex(char * data) = 0;
+	virtual std::string MytoJSON(void);
+	virtual void MyfromJSON(std::string json);
+	virtual void MytoTRex(char * buffer);
+	virtual void MyfromTRex(char * data);
 
 	};
 
