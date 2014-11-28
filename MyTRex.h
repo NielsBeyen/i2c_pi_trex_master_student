@@ -8,9 +8,9 @@
 
 namespace TRexlib{
 
-	class MyTrex: public Trex{
+	class MyTRex: public Trex{
 	public:  
-		MyTrex(I2C,int);
+		MyTRex(I2C,int);
 		readStatus::readStatus(StatusDataPacket * ):bool;
 		writeCommand(CommandDataPacket*):bool;
 
