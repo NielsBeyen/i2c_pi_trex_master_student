@@ -12,7 +12,6 @@ namespace TRexLib{
     
     MyI2C::MyI2C(const char * device, int i2caddress):I2C(device, i2caddress)
     {
-	strcpy(this->device,device);
 	openBus();
 	acquireBus(i2caddress);
     }
