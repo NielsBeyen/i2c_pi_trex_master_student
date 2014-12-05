@@ -1,10 +1,6 @@
 # The compiler
 <<<<<<< HEAD
 BINPATH=/home/niels/buildroot-2014.08/output/host/usr/bin/arm-buildroot-linux-uclibcgnueabi-
-=======
-
-BINPATH= /root/buildroot/output/host/usr/bin/arm-buildroot-linux-uclibcgnueabi-
->>>>>>> 8bf17889598aa94b8be11b1ddebca4384fbbfa48
 CC=$(BINPATH)g++
 
 # Compiler flags
