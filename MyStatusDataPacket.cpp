@@ -23,7 +23,7 @@ namespace TRexLib{
              * @buffer char buffer which contains the values that should be parsed
              */
             virtual void  MyStatusDataPacket::fromTRex(char * data){
-                  
+                  //
             }
 	
 }
