@@ -22,7 +22,7 @@ namespace TRexLib{
              *
              * @return true if the read action was successful
              */
-            virtual bool MyTRex::readStatus(StatusDataPacket * status){
+            bool MyTRex::readStatus(StatusDataPacket * status){
                 return false;
             }
 
@@ -33,7 +33,7 @@ namespace TRexLib{
              *
              * @return true if the write action was successful
              */
-            virtual bool MyTRex::writeCommand(CommandDataPacket * command){
+            bool MyTRex::writeCommand(CommandDataPacket * command){
                 return false;
             }
     
