@@ -1,8 +1,10 @@
+
 #include <string.h>
 #include <sstream>
 #include "AcceleroMeter.h"
 #ifndef Json_H
 #define Json_H
+
 
 namespace TRexLib{
 	class JsonKlas{
@@ -16,7 +18,9 @@ namespace TRexLib{
 		
 
 };
+
 }
+
 #endif
 
 //Overloadconstructoren aanmaken en hun arguementen meegeven. Key = adres

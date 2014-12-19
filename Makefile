@@ -1,5 +1,7 @@
 # The compiler
+
 BINPATH=/root/buildroot/output/host/usr/bin/arm-buildroot-linux-uclibcgnueabi-
+
 CC=$(BINPATH)g++
 
 # Compiler flags
