@@ -6,7 +6,7 @@
 	namespace TRexLib{
 		
 		std::string JsonKlas::intValue(std::string* output, std::string key, int value ){
-			std::ostringstream outputsteam ;
+			std::ostringstream outputstream ;
 			outputstream << value ;
 			output->append( "\"" + key + "\": " + outputstream.str());
 		}
@@ -38,7 +38,7 @@
 			//Json string van het zooitje maken en deze versturen : De Json string bestaat uit
 			//  \device_path\ : [value1,value2,value3]
 		}
-		std::string JsonKas::impValue(std::string* output, std::string key, Impact imp ){
+		std::string JsonKlas::impValue(std::string* output, std::string key, Impact imp ){
 			
 			std::ostringstream outputstream_x ;
 			outputstream_x << imp.x ;
