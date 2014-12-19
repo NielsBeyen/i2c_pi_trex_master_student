@@ -12,7 +12,8 @@ namespace TRexLib{
              * @i2cAddress the address of the slave
              */
             MyTRex::MyTRex(I2C* i2c, int i2cAddress):TRex(i2c,i2cAddress){
-
+                this->i2c = i2c;
+                this->i2cAddress = i2cAddress;
             }
 
             /*
@@ -23,7 +24,14 @@ namespace TRexLib{
              * @return true if the read action was successful
              */
             bool MyTRex::readStatus(StatusDataPacket * status){
-                return false;
+                
+                    char dataArray[StatusDataPacket::SIZE_STATUS_DATA_PACKET];
+                    i2c->read(i2cAddress,dataArray,StatusDataPacket::SIZE_STATUS_DATA_PACKET);
+                    status->fromTRex(dataArray);
+
+
+                    return true;
+                    
             }
 
             /*
@@ -34,7 +42,12 @@ namespace TRexLib{
              * @return true if the write action was successful
              */
             bool MyTRex::writeCommand(CommandDataPacket * command){
-                return false;
+
+                char buff[]={"command"};
+                i2c->write(i2cAddress,buff,sizeof(buff));
+
+
+                return true;
             }
     
 }
