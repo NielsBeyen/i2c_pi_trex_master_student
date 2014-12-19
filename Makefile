@@ -42,5 +42,11 @@ MyTRex.o: MyTRex.cpp
 main.o: main.cpp
 	$(CC) -c $(CFLAGS) main.cpp
 
+echoserv.o: echoserv.c	
+	$(CC) -c $(CFLAGS) echoserv.c
+	
+helper.o: helper.c	
+	$(CC) -c $(CFLAGS) helper.c
+	
 clean:
 	rm -f *.o i2c_pi_trex_master
