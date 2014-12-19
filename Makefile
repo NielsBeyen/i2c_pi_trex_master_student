@@ -1,6 +1,5 @@
 # The compiler
-
-BINPATH= /root/buildroot/output/host/usr/bin/arm-buildroot-linux-uclibcgnueabi-
+BINPATH=/root/buildroot/output/host/usr/bin/arm-buildroot-linux-uclibcgnueabi-
 CC=$(BINPATH)g++
 
 # Compiler flags
@@ -8,14 +7,17 @@ CFLAGS  = -Wall
   #  -Wall turns on most, but not all, compiler warnings
 
 
-all: clean I2C.o MyI2C.o wait.o Serial.o StatusDataPacket.o TRex.o main.o MyStatusDataPacket.o MyTRex.o 
-	$(CC) $(CFLAGS) I2C.o MyI2C.o wait.o Serial.o StatusDataPacket.o TRex.o MyStatusDataPacket.o MyTRex.o main.o -o i2c_pi_trex_master
+all: clean I2C.o MyI2C.o wait.o Serial.o StatusDataPacket.o TRex.o main.o Json.o  MyStatusDataPacket.o MyTRex.o 
+	$(CC) $(CFLAGS) I2C.o MyI2C.o wait.o Serial.o StatusDataPacket.o TRex.o Json.o MyStatusDataPacket.o MyTRex.o main.o -o i2c_pi_trex_master
 
 I2C.o: I2C.cpp
 	$(CC) -c $(CFLAGS) I2C.cpp
 
 MyI2C.o: MyI2C.cpp
 	$(CC) -c $(CFLAGS) MyI2C.cpp
+
+Json.o: Json.cpp
+	$(CC) -c $(CFLAGS) Json.cpp
 
 wait.o: wait.cpp
 	$(CC) -c $(CFLAGS) wait.cpp
