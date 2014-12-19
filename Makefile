@@ -1,6 +1,6 @@
 # The compiler
 
-BINPATH=/root/buildroot/output/host/usr/bin/arm-buildroot-linux-uclibcgnueabi-
+BINPATH=/home/niels/buildroot-2014.08/output/host/usr/bin/arm-buildroot-linux-uclibcgnueabi-
 
 CC=$(BINPATH)g++
 
