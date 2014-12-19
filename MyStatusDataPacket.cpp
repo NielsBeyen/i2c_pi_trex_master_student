@@ -9,7 +9,7 @@ namespace TRexLib{
              */
             std::string MyStatusDataPacket::toJSON(void){
             	
-                Json jsonF; //instantie/object maken van Json klasse
+                JsonKlas jsonF; //instantie/object maken van Json klasse
 
                 std::string json="{\"device_path\": \"/dev/i2c-1\", \"i2c_address\": 7,";
                 jsonF.doubleValue(&json,"battery_voltage",this->getBatteryVoltage());

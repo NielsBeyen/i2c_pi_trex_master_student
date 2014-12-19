@@ -2,7 +2,7 @@
 #include "Side.h"
 #include "AcceleroMeter.h"
 #include "Json.h"
-
+#include <string>
 #ifndef TREX_MY_STATUS_DATA_PACKET_H
 #define TREX_MY_STATUS_DATA_PACKET_H
 
