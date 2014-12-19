@@ -1,11 +1,14 @@
 #include "Json.h"
+
 #include <string>
+
 #include <sstream>
 
 
 	namespace TRexLib{
 		
 		std::string JsonKlas::intValue(std::string* output, std::string key, int value ){
+
 			std::ostringstream outputstream ;
 			outputstream << value ;
 			output->append( "\"" + key + "\": " + outputstream.str());
@@ -38,7 +41,9 @@
 			//Json string van het zooitje maken en deze versturen : De Json string bestaat uit
 			//  \device_path\ : [value1,value2,value3]
 		}
+
 		std::string JsonKlas::impValue(std::string* output, std::string key, Impact imp ){
+
 			
 			std::ostringstream outputstream_x ;
 			outputstream_x << imp.x ;
@@ -49,9 +54,11 @@
 			std::ostringstream outputstream_z ;
 			outputstream_z << imp.z ;
 			
-			output->append( "\"" + key + "\": [" + osx.str()+","+osy.str()+","+osz.str()+"],");
+
+			output->append( "\"" + key + "\": [" + outputstream_x.str()+","+outputstream_y.str()+","+outputstream_z.str()+"],");
 		}
-		
+}		
+
 		
 		
 		

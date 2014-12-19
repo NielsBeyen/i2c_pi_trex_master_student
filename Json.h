@@ -1,8 +1,10 @@
-#include <string>
+
+#include <string.h>
 #include <sstream>
 #include "AcceleroMeter.h"
-#ifndef Json.H
-#define Json.H
+#ifndef Json_H
+#define Json_H
+
 
 namespace TRexLib{
 	class JsonKlas{
@@ -16,6 +18,8 @@ namespace TRexLib{
 		
 
 };
+
+}
 
 #endif
 

@@ -1,4 +1,8 @@
 #include "MyStatusDataPacket.h"
+#include "AcceleroMeter.h"
+#include "Json.h"
+
+
 
 namespace TRexLib{
 
@@ -9,7 +13,7 @@ namespace TRexLib{
              */
             std::string MyStatusDataPacket::toJSON(void){
             	
-                Json jsonF; //instantie/object maken van Json klasse
+                JsonKlas jsonF; //instantie/object maken van Json klasse
 
                 std::string json="{\"device_path\": \"/dev/i2c-1\", \"i2c_address\": 7,";
                 jsonF.doubleValue(&json,"battery_voltage",this->getBatteryVoltage());
@@ -66,7 +70,7 @@ namespace TRexLib{
                 acc.y=((data[STATUS_ACCELEROMETER_Y_MSB]<<8)+data[STATUS_ACCELEROMETER_Y_LSB]);
                 acc.z=((data[STATUS_ACCELEROMETER_Z_MSB]<<8)+data[STATUS_ACCELEROMETER_Z_LSB]);
                 // read data from TRex -> accelerometer
-                this->setAcceleroMeter(accelero);
+                this->setAcceleroMeter(acc);
 
                 Impact imp; //instantie/object maken van Impact klasse
                 imp.x=((data[STATUS_IMPACT_X_MSB]<<8)+data[STATUS_IMPACT_X_LSB]);
